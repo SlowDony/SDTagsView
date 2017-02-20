@@ -1,0 +1,545 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		18BE89C41E5ADCBD00BA5AC9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BE89C31E5ADCBD00BA5AC9 /* main.m */; };
+		18BE89C71E5ADCBD00BA5AC9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BE89C61E5ADCBD00BA5AC9 /* AppDelegate.m */; };
+		18BE89CA1E5ADCBD00BA5AC9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BE89C91E5ADCBD00BA5AC9 /* ViewController.m */; };
+		18BE89CD1E5ADCBD00BA5AC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18BE89CB1E5ADCBD00BA5AC9 /* Main.storyboard */; };
+		18BE89CF1E5ADCBD00BA5AC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18BE89CE1E5ADCBD00BA5AC9 /* Assets.xcassets */; };
+		18BE89D21E5ADCBD00BA5AC9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18BE89D01E5ADCBD00BA5AC9 /* LaunchScreen.storyboard */; };
+		18BE89DD1E5ADCBD00BA5AC9 /* SDTagsViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BE89DC1E5ADCBD00BA5AC9 /* SDTagsViewTests.m */; };
+		18BE89E81E5ADCBD00BA5AC9 /* SDTagsViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BE89E71E5ADCBD00BA5AC9 /* SDTagsViewUITests.m */; };
+		18BE89F71E5ADCEE00BA5AC9 /* SDTagsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BE89F61E5ADCEE00BA5AC9 /* SDTagsView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		18BE89D91E5ADCBD00BA5AC9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 18BE89B71E5ADCBD00BA5AC9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 18BE89BE1E5ADCBD00BA5AC9;
+			remoteInfo = SDTagsView;
+		};
+		18BE89E41E5ADCBD00BA5AC9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 18BE89B71E5ADCBD00BA5AC9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 18BE89BE1E5ADCBD00BA5AC9;
+			remoteInfo = SDTagsView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		18BE89BF1E5ADCBD00BA5AC9 /* SDTagsView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SDTagsView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		18BE89C31E5ADCBD00BA5AC9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		18BE89C51E5ADCBD00BA5AC9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		18BE89C61E5ADCBD00BA5AC9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		18BE89C81E5ADCBD00BA5AC9 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		18BE89C91E5ADCBD00BA5AC9 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		18BE89CC1E5ADCBD00BA5AC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		18BE89CE1E5ADCBD00BA5AC9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		18BE89D11E5ADCBD00BA5AC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		18BE89D31E5ADCBD00BA5AC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18BE89D81E5ADCBD00BA5AC9 /* SDTagsViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SDTagsViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		18BE89DC1E5ADCBD00BA5AC9 /* SDTagsViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDTagsViewTests.m; sourceTree = "<group>"; };
+		18BE89DE1E5ADCBD00BA5AC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18BE89E31E5ADCBD00BA5AC9 /* SDTagsViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SDTagsViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		18BE89E71E5ADCBD00BA5AC9 /* SDTagsViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDTagsViewUITests.m; sourceTree = "<group>"; };
+		18BE89E91E5ADCBD00BA5AC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18BE89F51E5ADCEE00BA5AC9 /* SDTagsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDTagsView.h; sourceTree = "<group>"; };
+		18BE89F61E5ADCEE00BA5AC9 /* SDTagsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDTagsView.m; sourceTree = "<group>"; };
+		18BE89F91E5ADEAF00BA5AC9 /* SDHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDHeader.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		18BE89BC1E5ADCBD00BA5AC9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18BE89D51E5ADCBD00BA5AC9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18BE89E01E5ADCBD00BA5AC9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		18BE89B61E5ADCBD00BA5AC9 = {
+			isa = PBXGroup;
+			children = (
+				18BE89C11E5ADCBD00BA5AC9 /* SDTagsView */,
+				18BE89DB1E5ADCBD00BA5AC9 /* SDTagsViewTests */,
+				18BE89E61E5ADCBD00BA5AC9 /* SDTagsViewUITests */,
+				18BE89C01E5ADCBD00BA5AC9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		18BE89C01E5ADCBD00BA5AC9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				18BE89BF1E5ADCBD00BA5AC9 /* SDTagsView.app */,
+				18BE89D81E5ADCBD00BA5AC9 /* SDTagsViewTests.xctest */,
+				18BE89E31E5ADCBD00BA5AC9 /* SDTagsViewUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		18BE89C11E5ADCBD00BA5AC9 /* SDTagsView */ = {
+			isa = PBXGroup;
+			children = (
+				18BE89C51E5ADCBD00BA5AC9 /* AppDelegate.h */,
+				18BE89C61E5ADCBD00BA5AC9 /* AppDelegate.m */,
+				18BE89C81E5ADCBD00BA5AC9 /* ViewController.h */,
+				18BE89C91E5ADCBD00BA5AC9 /* ViewController.m */,
+				18BE89F51E5ADCEE00BA5AC9 /* SDTagsView.h */,
+				18BE89F61E5ADCEE00BA5AC9 /* SDTagsView.m */,
+				18BE89F91E5ADEAF00BA5AC9 /* SDHeader.h */,
+				18BE89CB1E5ADCBD00BA5AC9 /* Main.storyboard */,
+				18BE89CE1E5ADCBD00BA5AC9 /* Assets.xcassets */,
+				18BE89D01E5ADCBD00BA5AC9 /* LaunchScreen.storyboard */,
+				18BE89D31E5ADCBD00BA5AC9 /* Info.plist */,
+				18BE89C21E5ADCBD00BA5AC9 /* Supporting Files */,
+			);
+			path = SDTagsView;
+			sourceTree = "<group>";
+		};
+		18BE89C21E5ADCBD00BA5AC9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				18BE89C31E5ADCBD00BA5AC9 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		18BE89DB1E5ADCBD00BA5AC9 /* SDTagsViewTests */ = {
+			isa = PBXGroup;
+			children = (
+				18BE89DC1E5ADCBD00BA5AC9 /* SDTagsViewTests.m */,
+				18BE89DE1E5ADCBD00BA5AC9 /* Info.plist */,
+			);
+			path = SDTagsViewTests;
+			sourceTree = "<group>";
+		};
+		18BE89E61E5ADCBD00BA5AC9 /* SDTagsViewUITests */ = {
+			isa = PBXGroup;
+			children = (
+				18BE89E71E5ADCBD00BA5AC9 /* SDTagsViewUITests.m */,
+				18BE89E91E5ADCBD00BA5AC9 /* Info.plist */,
+			);
+			path = SDTagsViewUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		18BE89BE1E5ADCBD00BA5AC9 /* SDTagsView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18BE89EC1E5ADCBD00BA5AC9 /* Build configuration list for PBXNativeTarget "SDTagsView" */;
+			buildPhases = (
+				18BE89BB1E5ADCBD00BA5AC9 /* Sources */,
+				18BE89BC1E5ADCBD00BA5AC9 /* Frameworks */,
+				18BE89BD1E5ADCBD00BA5AC9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SDTagsView;
+			productName = SDTagsView;
+			productReference = 18BE89BF1E5ADCBD00BA5AC9 /* SDTagsView.app */;
+			productType = "com.apple.product-type.application";
+		};
+		18BE89D71E5ADCBD00BA5AC9 /* SDTagsViewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18BE89EF1E5ADCBD00BA5AC9 /* Build configuration list for PBXNativeTarget "SDTagsViewTests" */;
+			buildPhases = (
+				18BE89D41E5ADCBD00BA5AC9 /* Sources */,
+				18BE89D51E5ADCBD00BA5AC9 /* Frameworks */,
+				18BE89D61E5ADCBD00BA5AC9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				18BE89DA1E5ADCBD00BA5AC9 /* PBXTargetDependency */,
+			);
+			name = SDTagsViewTests;
+			productName = SDTagsViewTests;
+			productReference = 18BE89D81E5ADCBD00BA5AC9 /* SDTagsViewTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		18BE89E21E5ADCBD00BA5AC9 /* SDTagsViewUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18BE89F21E5ADCBD00BA5AC9 /* Build configuration list for PBXNativeTarget "SDTagsViewUITests" */;
+			buildPhases = (
+				18BE89DF1E5ADCBD00BA5AC9 /* Sources */,
+				18BE89E01E5ADCBD00BA5AC9 /* Frameworks */,
+				18BE89E11E5ADCBD00BA5AC9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				18BE89E51E5ADCBD00BA5AC9 /* PBXTargetDependency */,
+			);
+			name = SDTagsViewUITests;
+			productName = SDTagsViewUITests;
+			productReference = 18BE89E31E5ADCBD00BA5AC9 /* SDTagsViewUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		18BE89B71E5ADCBD00BA5AC9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = slowdony;
+				TargetAttributes = {
+					18BE89BE1E5ADCBD00BA5AC9 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = HP4N98TFK6;
+						ProvisioningStyle = Automatic;
+					};
+					18BE89D71E5ADCBD00BA5AC9 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = HP4N98TFK6;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 18BE89BE1E5ADCBD00BA5AC9;
+					};
+					18BE89E21E5ADCBD00BA5AC9 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = HP4N98TFK6;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 18BE89BE1E5ADCBD00BA5AC9;
+					};
+				};
+			};
+			buildConfigurationList = 18BE89BA1E5ADCBD00BA5AC9 /* Build configuration list for PBXProject "SDTagsView" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 18BE89B61E5ADCBD00BA5AC9;
+			productRefGroup = 18BE89C01E5ADCBD00BA5AC9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				18BE89BE1E5ADCBD00BA5AC9 /* SDTagsView */,
+				18BE89D71E5ADCBD00BA5AC9 /* SDTagsViewTests */,
+				18BE89E21E5ADCBD00BA5AC9 /* SDTagsViewUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		18BE89BD1E5ADCBD00BA5AC9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18BE89D21E5ADCBD00BA5AC9 /* LaunchScreen.storyboard in Resources */,
+				18BE89CF1E5ADCBD00BA5AC9 /* Assets.xcassets in Resources */,
+				18BE89CD1E5ADCBD00BA5AC9 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18BE89D61E5ADCBD00BA5AC9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18BE89E11E5ADCBD00BA5AC9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		18BE89BB1E5ADCBD00BA5AC9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18BE89F71E5ADCEE00BA5AC9 /* SDTagsView.m in Sources */,
+				18BE89CA1E5ADCBD00BA5AC9 /* ViewController.m in Sources */,
+				18BE89C71E5ADCBD00BA5AC9 /* AppDelegate.m in Sources */,
+				18BE89C41E5ADCBD00BA5AC9 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18BE89D41E5ADCBD00BA5AC9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18BE89DD1E5ADCBD00BA5AC9 /* SDTagsViewTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18BE89DF1E5ADCBD00BA5AC9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18BE89E81E5ADCBD00BA5AC9 /* SDTagsViewUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		18BE89DA1E5ADCBD00BA5AC9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 18BE89BE1E5ADCBD00BA5AC9 /* SDTagsView */;
+			targetProxy = 18BE89D91E5ADCBD00BA5AC9 /* PBXContainerItemProxy */;
+		};
+		18BE89E51E5ADCBD00BA5AC9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 18BE89BE1E5ADCBD00BA5AC9 /* SDTagsView */;
+			targetProxy = 18BE89E41E5ADCBD00BA5AC9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		18BE89CB1E5ADCBD00BA5AC9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				18BE89CC1E5ADCBD00BA5AC9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		18BE89D01E5ADCBD00BA5AC9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				18BE89D11E5ADCBD00BA5AC9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		18BE89EA1E5ADCBD00BA5AC9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		18BE89EB1E5ADCBD00BA5AC9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		18BE89ED1E5ADCBD00BA5AC9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = HP4N98TFK6;
+				INFOPLIST_FILE = SDTagsView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = SD.SDTagsView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		18BE89EE1E5ADCBD00BA5AC9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = HP4N98TFK6;
+				INFOPLIST_FILE = SDTagsView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = SD.SDTagsView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		18BE89F01E5ADCBD00BA5AC9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = HP4N98TFK6;
+				INFOPLIST_FILE = SDTagsViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = SD.SDTagsViewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SDTagsView.app/SDTagsView";
+			};
+			name = Debug;
+		};
+		18BE89F11E5ADCBD00BA5AC9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = HP4N98TFK6;
+				INFOPLIST_FILE = SDTagsViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = SD.SDTagsViewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SDTagsView.app/SDTagsView";
+			};
+			name = Release;
+		};
+		18BE89F31E5ADCBD00BA5AC9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = HP4N98TFK6;
+				INFOPLIST_FILE = SDTagsViewUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = SD.SDTagsViewUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = SDTagsView;
+			};
+			name = Debug;
+		};
+		18BE89F41E5ADCBD00BA5AC9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = HP4N98TFK6;
+				INFOPLIST_FILE = SDTagsViewUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = SD.SDTagsViewUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = SDTagsView;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		18BE89BA1E5ADCBD00BA5AC9 /* Build configuration list for PBXProject "SDTagsView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18BE89EA1E5ADCBD00BA5AC9 /* Debug */,
+				18BE89EB1E5ADCBD00BA5AC9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		18BE89EC1E5ADCBD00BA5AC9 /* Build configuration list for PBXNativeTarget "SDTagsView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18BE89ED1E5ADCBD00BA5AC9 /* Debug */,
+				18BE89EE1E5ADCBD00BA5AC9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		18BE89EF1E5ADCBD00BA5AC9 /* Build configuration list for PBXNativeTarget "SDTagsViewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18BE89F01E5ADCBD00BA5AC9 /* Debug */,
+				18BE89F11E5ADCBD00BA5AC9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		18BE89F21E5ADCBD00BA5AC9 /* Build configuration list for PBXNativeTarget "SDTagsViewUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18BE89F31E5ADCBD00BA5AC9 /* Debug */,
+				18BE89F41E5ADCBD00BA5AC9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 18BE89B71E5ADCBD00BA5AC9 /* Project object */;
+}
