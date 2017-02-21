@@ -10,11 +10,13 @@
 #import "SDHeader.h"
 
 #define SDRectangleTagMaxCoult 3 // 矩阵标签时，最多列数
-@interface SDTagsView ()
+@interface SDTagsView ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 {
     UIView *sdTagsView;
     NSArray *tagsArr;
 }
+@property (nonatomic,strong)UICollectionView *collectionView;
+
 @end
 @implementation SDTagsView
 
@@ -41,54 +43,73 @@
     
     sdTagsView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     [self addSubview:sdTagsView];
-    
     tagsArr =@[@"哈哈哈",@"哦哦哦哦哦哦",@"耶耶耶",@"哦",@"啦啦"];
     
-   
-    for (int i = 0; i < tagsArr.count; i++) {
+    
+    
+    
+    
+}
+
+- (UICollectionView *)collectionView {
+    if (!_collectionView) {
+        UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
+        flowLayout.minimumLineSpacing = 5;
+        flowLayout.minimumInteritemSpacing = 5;
+//        self.edgesForExtendedLayout = UIRectEdgeNone;
         
-        CGFloat rectangleTagLabelWith =sdTagsView.frame.size.width / SDRectangleTagMaxCoult;
-        ;
+        _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(15, 64, mDeviceWidth-30, mDeviceHeight-100) collectionViewLayout:flowLayout];
+        _collectionView.delegate = self;
+        _collectionView.dataSource = self;
         
-        CGFloat rectangleTagLabelHeight =40;
-        CGFloat rectangleTagLabelX =rectangleTagLabelWith* (i % SDRectangleTagMaxCoult);
-        CGFloat rectangleTagLabelY =rectangleTagLabelHeight * (i / SDRectangleTagMaxCoult);
-        // 创建标签
-        UILabel *rectangleTagLabel = [self labelWithTitle: tagsArr[i]];
-        
-        // 设置属性
-       
-        
-//        rectangleTagLabel.textAlignment = NSTextAlignmentCenter;
-        [rectangleTagLabel addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tagDidCLick:)]];
-        
-        
-        // 添加标签
-        [sdTagsView addSubview:rectangleTagLabel];
+        [_collectionView setBackgroundColor:[UIColor clearColor]];
+        [self addSubview:_collectionView];
+        //注册
+        [_collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"SDtagsView"];
     }
-
+    return _collectionView;
 }
-
-- (UILabel *)labelWithTitle:(NSString *)title
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    UILabel *label = [[UILabel alloc] init];
-    label.userInteractionEnabled = YES;
-    label.font = [UIFont systemFontOfSize:12];
-    label.text = title;
-    label.textColor = [UIColor grayColor];
-    label.backgroundColor = [UIColor redColor];
-    label.layer.cornerRadius = 3;
-    label.clipsToBounds = YES;
-    label.textAlignment = NSTextAlignmentCenter;
-    [label sizeToFit];
-    
-    NSLog(@"py_width:%f,py_height:%f",label.frame.size.width ,label.frame.size.height);
-    return label;
+    return tagsArr.count;
 }
--(void)tagDidCLick:(UITapGestureRecognizer *)gr{
-    
-    UILabel *label = (UILabel *)gr.view;
-    
-    
+
+//- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    ListModel *model = self.dataArray[indexPath.row];
+//    CGFloat width = [self widthForLabel:[NSString stringWithFormat:@"%@",model.title] fontSize:16];
+//    return CGSizeMake(width+10,22);
+//}
+//- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"jin" forIndexPath:indexPath];
+//    ListModel *model = self.dataArray[indexPath.row];
+//    UILabel *label = [[UILabel alloc] init];
+//    label.text = [NSString stringWithFormat:@"%@",model.title];
+//    label.frame = CGRectMake(0, 0, ([self widthForLabel:label.text fontSize:16] + 10), 22);
+//    label.font = [UIFont systemFontOfSize:16];
+//    label.layer.cornerRadius = 2.0;
+//    label.layer.masksToBounds = YES;
+//    label.layer.borderWidth = 1.0;
+//    label.textAlignment = NSTextAlignmentCenter;
+//    label.textColor = [UIColor colorWithHexString:model.color];
+//    label.layer.borderColor = [UIColor colorWithHexString:model.color].CGColor;
+//    [cell.contentView addSubview:label];
+//    return cell;
+//}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSLog(@"index:%ld",indexPath.row);
 }
+
+/**
+ *  计算文字长度
+ */
+- (CGFloat)widthForLabel:(NSString *)text fontSize:(CGFloat)font
+{
+    CGSize size = [text sizeWithAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIFont systemFontOfSize:font], NSFontAttributeName, nil]];
+    return size.width;
+}
+
 @end
