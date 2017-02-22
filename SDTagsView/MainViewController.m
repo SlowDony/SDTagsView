@@ -9,6 +9,7 @@
 #import "MainViewController.h"
 #import "SDHeader.h"
 #import "CollectionTagsViewController.h"
+#import "LabelTagsViewController.h"
 @interface MainViewController ()<UITableViewDelegate,UITableViewDataSource>
 {
     NSArray *dataArr;
@@ -81,7 +82,8 @@
             break;
         case 1:
         {
-            CollectionTagsViewController *v =[[CollectionTagsViewController alloc]init];
+            LabelTagsViewController *v =[[LabelTagsViewController alloc]init];
+              v.navTitle =dataArr[indexPath.row];
             [self.navigationController pushViewController:v animated:YES];
         }
             break;
