@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1880325A1E5D3A1300DD7551 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 188032591E5D3A1300DD7551 /* MainViewController.m */; };
+		1880325D1E5D3BBB00DD7551 /* CollectionTagsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1880325C1E5D3BBB00DD7551 /* CollectionTagsViewController.m */; };
 		18BE89C41E5ADCBD00BA5AC9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BE89C31E5ADCBD00BA5AC9 /* main.m */; };
 		18BE89C71E5ADCBD00BA5AC9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BE89C61E5ADCBD00BA5AC9 /* AppDelegate.m */; };
 		18BE89CA1E5ADCBD00BA5AC9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BE89C91E5ADCBD00BA5AC9 /* ViewController.m */; };
@@ -36,6 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		188032581E5D3A1300DD7551 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		188032591E5D3A1300DD7551 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		1880325B1E5D3BBB00DD7551 /* CollectionTagsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionTagsViewController.h; sourceTree = "<group>"; };
+		1880325C1E5D3BBB00DD7551 /* CollectionTagsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionTagsViewController.m; sourceTree = "<group>"; };
 		18BE89BF1E5ADCBD00BA5AC9 /* SDTagsView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SDTagsView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18BE89C31E5ADCBD00BA5AC9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		18BE89C51E5ADCBD00BA5AC9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -109,6 +115,10 @@
 				18BE89C61E5ADCBD00BA5AC9 /* AppDelegate.m */,
 				18BE89C81E5ADCBD00BA5AC9 /* ViewController.h */,
 				18BE89C91E5ADCBD00BA5AC9 /* ViewController.m */,
+				188032581E5D3A1300DD7551 /* MainViewController.h */,
+				188032591E5D3A1300DD7551 /* MainViewController.m */,
+				1880325B1E5D3BBB00DD7551 /* CollectionTagsViewController.h */,
+				1880325C1E5D3BBB00DD7551 /* CollectionTagsViewController.m */,
 				18BE89F51E5ADCEE00BA5AC9 /* SDTagsView.h */,
 				18BE89F61E5ADCEE00BA5AC9 /* SDTagsView.m */,
 				18BE89F91E5ADEAF00BA5AC9 /* SDHeader.h */,
@@ -286,6 +296,8 @@
 				18BE89F71E5ADCEE00BA5AC9 /* SDTagsView.m in Sources */,
 				18BE89CA1E5ADCBD00BA5AC9 /* ViewController.m in Sources */,
 				18BE89C71E5ADCBD00BA5AC9 /* AppDelegate.m in Sources */,
+				1880325D1E5D3BBB00DD7551 /* CollectionTagsViewController.m in Sources */,
+				1880325A1E5D3A1300DD7551 /* MainViewController.m in Sources */,
 				18BE89C41E5ADCBD00BA5AC9 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -522,6 +534,7 @@
 				18BE89EE1E5ADCBD00BA5AC9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		18BE89EF1E5ADCBD00BA5AC9 /* Build configuration list for PBXNativeTarget "SDTagsViewTests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +543,7 @@
 				18BE89F11E5ADCBD00BA5AC9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		18BE89F21E5ADCBD00BA5AC9 /* Build configuration list for PBXNativeTarget "SDTagsViewUITests" */ = {
 			isa = XCConfigurationList;
@@ -538,6 +552,7 @@
 				18BE89F41E5ADCBD00BA5AC9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
