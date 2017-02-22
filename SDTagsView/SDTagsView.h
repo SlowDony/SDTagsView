@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface SDTagsView : UIView
-
+@property (nonatomic,strong)NSArray *tagsArr;
++(instancetype)sdTagsViewWithTagsArr:(NSArray*)tagsArr;
 @end

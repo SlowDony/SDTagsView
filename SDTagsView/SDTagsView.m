@@ -13,7 +13,7 @@
 @interface SDTagsView ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 {
     UIView *sdTagsView;
-    NSArray *tagsArr;
+    
 }
 @property (nonatomic,strong)UICollectionView *collectionView;
 
@@ -43,12 +43,14 @@
     
     sdTagsView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     [self addSubview:sdTagsView];
-    tagsArr =@[@"哈哈哈",@"哦哦哦哦哦哦",@"耶耶耶",@"哦",@"啦啦"];
-    
-    
-    
-    
-    
+  
+    [sdTagsView addSubview:self.collectionView];
+}
+
++(instancetype)sdTagsViewWithTagsArr:(NSArray*)tagsArr{
+    SDTagsView *sdTagsView =[[SDTagsView alloc]init];
+    sdTagsView.tagsArr =[[NSArray alloc]initWithArray:tagsArr];
+    return sdTagsView;
 }
 
 - (UICollectionView *)collectionView {
@@ -63,7 +65,7 @@
         _collectionView.dataSource = self;
         
         [_collectionView setBackgroundColor:[UIColor clearColor]];
-        [self addSubview:_collectionView];
+        [sdTagsView addSubview:_collectionView];
         //注册
         [_collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"SDtagsView"];
     }
@@ -71,36 +73,37 @@
 }
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return tagsArr.count;
+    return self.tagsArr.count;
 }
 
-//- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    ListModel *model = self.dataArray[indexPath.row];
-//    CGFloat width = [self widthForLabel:[NSString stringWithFormat:@"%@",model.title] fontSize:16];
-//    return CGSizeMake(width+10,22);
-//}
-//- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"jin" forIndexPath:indexPath];
-//    ListModel *model = self.dataArray[indexPath.row];
-//    UILabel *label = [[UILabel alloc] init];
-//    label.text = [NSString stringWithFormat:@"%@",model.title];
-//    label.frame = CGRectMake(0, 0, ([self widthForLabel:label.text fontSize:16] + 10), 22);
-//    label.font = [UIFont systemFontOfSize:16];
-//    label.layer.cornerRadius = 2.0;
-//    label.layer.masksToBounds = YES;
-//    label.layer.borderWidth = 1.0;
-//    label.textAlignment = NSTextAlignmentCenter;
-//    label.textColor = [UIColor colorWithHexString:model.color];
-//    label.layer.borderColor = [UIColor colorWithHexString:model.color].CGColor;
-//    [cell.contentView addSubview:label];
-//    return cell;
-//}
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    CGFloat width = [self widthForLabel:[NSString stringWithFormat:@"%@",self.tagsArr[indexPath.row]] fontSize:16];
+    return CGSizeMake(width+10,22);
+}
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"SDtagsView" forIndexPath:indexPath];
+    
+    UILabel *label = [[UILabel alloc] init];
+    label.text = [NSString stringWithFormat:@"%@",self.tagsArr[indexPath.row]];
+    label.frame = CGRectMake(0, 0, ([self widthForLabel:label.text fontSize:16] + 10), 22);
+    label.font = [UIFont systemFontOfSize:16];
+    label.layer.cornerRadius = 2.0;
+    label.layer.masksToBounds = YES;
+    label.layer.borderWidth = 1.0;
+    label.textAlignment = NSTextAlignmentCenter;
+    label.textColor = fontHightColor;
+    label.layer.borderColor = fontHightColor.CGColor;
+    [cell.contentView addSubview:label];
+    return cell;
+}
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"index:%ld",indexPath.row);
+    
+    NSLog(@"index:%@",self.tagsArr[indexPath.row]);
 }
 
 /**
