@@ -9,6 +9,7 @@
 #import "CollectionTagsViewController.h"
 #import "SDHeader.h"
 #import "SDTagsView.h"
+#import "TagsModel.h"
 @interface CollectionTagsViewController ()
 {
     NSArray *tagsArr;
@@ -21,7 +22,7 @@
     [super viewDidLoad];
     [self.navigationItem setTitle:self.navTitle];
     [self.view setBackgroundColor:[UIColor whiteColor]];
-    
+    [self addData];
     [self setUp];
     // Do any additional setup after loading the view.
 }
@@ -30,15 +31,26 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+-(void)addData{
+    
+    NSString *path =[[NSBundle mainBundle ]pathForResource:@"tagsData.plist" ofType:nil];
+    NSArray *dataArr =[NSArray arrayWithContentsOfFile:path];
+    NSMutableArray *tempArr =[NSMutableArray array];
+    for (NSDictionary *dict in dataArr){
+        TagsModel *model =[[TagsModel alloc]initWithTagsDict:dict];
+        [tempArr addObject:model];
+        tagsArr =[tempArr copy];
+    }
+    
+    NSLog(@"tagsArr:%@",tagsArr);
+}
 -(void)setUp{
     
-    tagsArr= @[@"Java", @"Python", @"Objective-C", @"Swift", @"C", @"C++", @"PHP", @"C#", @"Perl", @"Go", @"JavaScript", @"R", @"Ruby", @"MATLAB",@"Java", @"Python", @"Objective-C", @"Swift", @"C", @"C++", @"PHP", @"C#", @"Perl", @"Go", @"JavaScript", @"R", @"Ruby", @"MATLAB"];
-    
     SDTagsView *sdTagsView =[SDTagsView sdTagsViewWithTagsArr:tagsArr];
-    
     sdTagsView.frame =CGRectMake(0,30,mDeviceWidth,300);
-    
     [self.view addSubview:sdTagsView];
+    
 }
 /*
 #pragma mark - Navigation

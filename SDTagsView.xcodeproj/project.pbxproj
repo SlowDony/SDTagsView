@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1880325A1E5D3A1300DD7551 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 188032591E5D3A1300DD7551 /* MainViewController.m */; };
 		1880325D1E5D3BBB00DD7551 /* CollectionTagsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1880325C1E5D3BBB00DD7551 /* CollectionTagsViewController.m */; };
+		188032601E5D3EC600DD7551 /* TagsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1880325F1E5D3EC600DD7551 /* TagsModel.m */; };
+		188032621E5D3F4100DD7551 /* tagsData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 188032611E5D3F4100DD7551 /* tagsData.plist */; };
 		18BE89C41E5ADCBD00BA5AC9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BE89C31E5ADCBD00BA5AC9 /* main.m */; };
 		18BE89C71E5ADCBD00BA5AC9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BE89C61E5ADCBD00BA5AC9 /* AppDelegate.m */; };
 		18BE89CA1E5ADCBD00BA5AC9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BE89C91E5ADCBD00BA5AC9 /* ViewController.m */; };
@@ -42,6 +44,9 @@
 		188032591E5D3A1300DD7551 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		1880325B1E5D3BBB00DD7551 /* CollectionTagsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionTagsViewController.h; sourceTree = "<group>"; };
 		1880325C1E5D3BBB00DD7551 /* CollectionTagsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionTagsViewController.m; sourceTree = "<group>"; };
+		1880325E1E5D3EC600DD7551 /* TagsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TagsModel.h; sourceTree = "<group>"; };
+		1880325F1E5D3EC600DD7551 /* TagsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TagsModel.m; sourceTree = "<group>"; };
+		188032611E5D3F4100DD7551 /* tagsData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = tagsData.plist; sourceTree = "<group>"; };
 		18BE89BF1E5ADCBD00BA5AC9 /* SDTagsView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SDTagsView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18BE89C31E5ADCBD00BA5AC9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		18BE89C51E5ADCBD00BA5AC9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -111,6 +116,7 @@
 		18BE89C11E5ADCBD00BA5AC9 /* SDTagsView */ = {
 			isa = PBXGroup;
 			children = (
+				188032611E5D3F4100DD7551 /* tagsData.plist */,
 				18BE89C51E5ADCBD00BA5AC9 /* AppDelegate.h */,
 				18BE89C61E5ADCBD00BA5AC9 /* AppDelegate.m */,
 				18BE89C81E5ADCBD00BA5AC9 /* ViewController.h */,
@@ -121,6 +127,8 @@
 				1880325C1E5D3BBB00DD7551 /* CollectionTagsViewController.m */,
 				18BE89F51E5ADCEE00BA5AC9 /* SDTagsView.h */,
 				18BE89F61E5ADCEE00BA5AC9 /* SDTagsView.m */,
+				1880325E1E5D3EC600DD7551 /* TagsModel.h */,
+				1880325F1E5D3EC600DD7551 /* TagsModel.m */,
 				18BE89F91E5ADEAF00BA5AC9 /* SDHeader.h */,
 				18BE89CB1E5ADCBD00BA5AC9 /* Main.storyboard */,
 				18BE89CE1E5ADCBD00BA5AC9 /* Assets.xcassets */,
@@ -267,6 +275,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18BE89D21E5ADCBD00BA5AC9 /* LaunchScreen.storyboard in Resources */,
+				188032621E5D3F4100DD7551 /* tagsData.plist in Resources */,
 				18BE89CF1E5ADCBD00BA5AC9 /* Assets.xcassets in Resources */,
 				18BE89CD1E5ADCBD00BA5AC9 /* Main.storyboard in Resources */,
 			);
@@ -294,6 +303,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18BE89F71E5ADCEE00BA5AC9 /* SDTagsView.m in Sources */,
+				188032601E5D3EC600DD7551 /* TagsModel.m in Sources */,
 				18BE89CA1E5ADCBD00BA5AC9 /* ViewController.m in Sources */,
 				18BE89C71E5ADCBD00BA5AC9 /* AppDelegate.m in Sources */,
 				1880325D1E5D3BBB00DD7551 /* CollectionTagsViewController.m in Sources */,

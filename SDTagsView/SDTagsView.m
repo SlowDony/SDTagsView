@@ -8,7 +8,7 @@
 
 #import "SDTagsView.h"
 #import "SDHeader.h"
-
+#import "TagsModel.h"
 #define SDRectangleTagMaxCoult 3 // 矩阵标签时，最多列数
 @interface SDTagsView ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 {
@@ -79,15 +79,17 @@
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    CGFloat width = [self widthForLabel:[NSString stringWithFormat:@"%@",self.tagsArr[indexPath.row]] fontSize:16];
+    TagsModel *model =self.tagsArr[indexPath.row];
+    CGFloat width = [self widthForLabel:[NSString stringWithFormat:@"%@",model.title] fontSize:16];
     return CGSizeMake(width+10,22);
 }
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"SDtagsView" forIndexPath:indexPath];
+    TagsModel *model =self.tagsArr[indexPath.row];
     
     UILabel *label = [[UILabel alloc] init];
-    label.text = [NSString stringWithFormat:@"%@",self.tagsArr[indexPath.row]];
+    label.text = [NSString stringWithFormat:@"%@",model.title];
     label.frame = CGRectMake(0, 0, ([self widthForLabel:label.text fontSize:16] + 10), 22);
     label.font = [UIFont systemFontOfSize:16];
     label.layer.cornerRadius = 2.0;
@@ -102,8 +104,8 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    
-    NSLog(@"index:%@",self.tagsArr[indexPath.row]);
+    TagsModel *model =self.tagsArr[indexPath.row];
+    NSLog(@"index:%@",model.color);
 }
 
 /**
