@@ -1,7 +1,7 @@
 # SDTagsView1.0
  
-![](https://github.com/SlowDony/SDTagsView/blob/master/SDTagsView/SDTagsView.png)
- 
+
+ <img src="https://github.com/SlowDony/SDTagsView/blob/master/SDTagsView/SDTagsView.png" width="50%" height="50%">
  
 
 项目预览:
