@@ -22,6 +22,8 @@
 		EFF261201F1B108400EEEEC8 /* SDLabTagsView.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF2611A1F1B108400EEEEC8 /* SDLabTagsView.m */; };
 		EFF261211F1B108400EEEEC8 /* tagsData.plist in Resources */ = {isa = PBXBuildFile; fileRef = EFF2611C1F1B108400EEEEC8 /* tagsData.plist */; };
 		EFF261221F1B108400EEEEC8 /* TagsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF2611E1F1B108400EEEEC8 /* TagsModel.m */; };
+		EFF261281F1B4B7E00EEEEC8 /* SDTagsView.png in Resources */ = {isa = PBXBuildFile; fileRef = EFF261271F1B4B7E00EEEEC8 /* SDTagsView.png */; };
+		EFF2612A1F1B4B8600EEEEC8 /* SDTagsView.gif in Resources */ = {isa = PBXBuildFile; fileRef = EFF261291F1B4B8600EEEEC8 /* SDTagsView.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +74,8 @@
 		EFF2611C1F1B108400EEEEC8 /* tagsData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = tagsData.plist; sourceTree = "<group>"; };
 		EFF2611D1F1B108400EEEEC8 /* TagsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TagsModel.h; sourceTree = "<group>"; };
 		EFF2611E1F1B108400EEEEC8 /* TagsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TagsModel.m; sourceTree = "<group>"; };
+		EFF261271F1B4B7E00EEEEC8 /* SDTagsView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SDTagsView.png; sourceTree = "<group>"; };
+		EFF261291F1B4B8600EEEEC8 /* SDTagsView.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = SDTagsView.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +145,8 @@
 		18BE89C21E5ADCBD00BA5AC9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EFF261291F1B4B8600EEEEC8 /* SDTagsView.gif */,
+				EFF261271F1B4B7E00EEEEC8 /* SDTagsView.png */,
 				18BE89C31E5ADCBD00BA5AC9 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -316,10 +322,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFF261281F1B4B7E00EEEEC8 /* SDTagsView.png in Resources */,
 				18BE89D21E5ADCBD00BA5AC9 /* LaunchScreen.storyboard in Resources */,
 				18BE89CF1E5ADCBD00BA5AC9 /* Assets.xcassets in Resources */,
 				EFF261211F1B108400EEEEC8 /* tagsData.plist in Resources */,
 				18BE89CD1E5ADCBD00BA5AC9 /* Main.storyboard in Resources */,
+				EFF2612A1F1B4B8600EEEEC8 /* SDTagsView.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
