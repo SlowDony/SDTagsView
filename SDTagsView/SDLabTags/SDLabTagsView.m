@@ -64,16 +64,22 @@
         
         TagsModel *model =arr[i];
 
-        int labWidth = [self widthForLabel:model.title fontSize:12]+10;
+        int labWidth = [self widthForLabel:model.title fontSize:16]+10;
         UILabel *label = [[UILabel alloc] init];
-        label.frame = CGRectMake(5*j + width, row * 30, labWidth, 15);
+        label.frame = CGRectMake(5*j + width, row * 30, labWidth, 22);
         label.backgroundColor = [UIColor clearColor];
         label.textColor = [UIColor blackColor];
         label.text =model.title;
         label.textAlignment = NSTextAlignmentCenter;
-        label.font = [UIFont systemFontOfSize:12];
+        label.font = [UIFont systemFontOfSize:16];
         label.numberOfLines = 1;
         label.layer.borderWidth = 1;
+        label.textColor = [self getColor:model.color];
+        label.layer.borderColor = [self getColor:model.color].CGColor;
+        
+        
+
+
         [sdTagsView addSubview:label];
         
         width = width + labWidth;
@@ -88,50 +94,12 @@
             
             row++;
             
-            label.frame = CGRectMake(5*j + width,row * 30, labWidth, 15);
+            label.frame = CGRectMake(5*j + width,row * 30, labWidth, 22);
             
             width = width + labWidth;
             
             j++;
             
-        }
-        
-        int z = i%4;
-        
-        switch (z) {
-            case 0:
-            {
-                label.textColor = mHexRGB(0xeb3027);
-                label.layer.borderColor = mHexRGB(0xeb3027).CGColor;
-            }
-                break;
-            case 1:
-            {
-                label.textColor = mHexRGB(0x22b6ff);
-                label.layer.borderColor = mHexRGB(0x22b6ff).CGColor;
-            }
-                break;
-            case 2:
-            {
-                label.textColor = mHexRGB(0x51b20a);
-                label.layer.borderColor = mHexRGB(0x51b20a).CGColor;
-            }
-                break;
-            case 3:
-            {
-                label.textColor = mHexRGB(0x897be2);
-                label.layer.borderColor = mHexRGB(0x897be2).CGColor;
-            }
-                break;
-            case 4:
-            {
-                label.textColor = mHexRGB(0xeb3027);
-                label.layer.borderColor = mHexRGB(0xeb3027).CGColor;
-            }
-                break;
-                
-            default:
-                break;
         }
         
     }
@@ -148,4 +116,19 @@
     return size.width;
 }
 
+-(UIColor *) getColor:(NSString *)hexColor
+{
+    unsigned int red, green, blue;
+    NSRange range;
+    range.length =2;
+    
+    range.location =0;
+    [[NSScanner scannerWithString:[hexColor substringWithRange:range]]scanHexInt:&red];
+    range.location =2;
+    [[NSScanner scannerWithString:[hexColor substringWithRange:range]]scanHexInt:&green];
+    range.location =4;
+    [[NSScanner scannerWithString:[hexColor substringWithRange:range]]scanHexInt:&blue];
+    
+    return [UIColor colorWithRed:(float)(red/255.0f)green:(float)(green/255.0f)blue:(float)(blue/255.0f)alpha:1.0f];
+}
 @end

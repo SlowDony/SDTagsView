@@ -6,31 +6,31 @@
 		<key>title</key>
 		<string>MATLAB</string>
 		<key>color</key>
-		<string>fa4040</string>
+		<string>eb3027</string>
 	</dict>
 	<dict>
 		<key>title</key>
 		<string>JavaScript</string>
 		<key>color</key>
-		<string>fa4040</string>
+		<string>22b6ff</string>
 	</dict>
 	<dict>
 		<key>title</key>
 		<string>Java</string>
 		<key>color</key>
-		<string>fa4040</string>
+		<string>51b20a</string>
 	</dict>
 	<dict>
 		<key>title</key>
 		<string>Swift</string>
 		<key>color</key>
-		<string>fa4040</string>
+		<string>897be2</string>
 	</dict>
 	<dict>
 		<key>title</key>
 		<string>Java</string>
 		<key>color</key>
-		<string>fa4040</string>
+		<string>eb3027</string>
 	</dict>
 	<dict>
 		<key>title</key>
@@ -42,25 +42,25 @@
 		<key>title</key>
 		<string>Java</string>
 		<key>color</key>
-		<string>fa4040</string>
+		<string>eb3027</string>
 	</dict>
 	<dict>
 		<key>title</key>
 		<string>Go</string>
 		<key>color</key>
-		<string>fa4040</string>
+		<string>22b6ff</string>
 	</dict>
 	<dict>
 		<key>title</key>
 		<string>C++</string>
 		<key>color</key>
-		<string>fa4040</string>
+		<string>51b20a</string>
 	</dict>
 	<dict>
 		<key>title</key>
 		<string>PHP</string>
 		<key>color</key>
-		<string>fa4040</string>
+		<string>897be2</string>
 	</dict>
 	<dict>
 		<key>title</key>
@@ -72,7 +72,7 @@
 		<key>title</key>
 		<string>Python</string>
 		<key>color</key>
-		<string>fa4040</string>
+		<string>eb3027</string>
 	</dict>
 	<dict>
 		<key>title</key>
@@ -84,7 +84,7 @@
 		<key>title</key>
 		<string>Java</string>
 		<key>color</key>
-		<string>fa4040</string>
+		<string>22b6ff</string>
 	</dict>
 	<dict>
 		<key>title</key>
@@ -96,19 +96,19 @@
 		<key>title</key>
 		<string>Swift</string>
 		<key>color</key>
-		<string>282e29</string>
+		<string>51b20a</string>
 	</dict>
 	<dict>
 		<key>title</key>
 		<string>C</string>
 		<key>color</key>
-		<string>CC0000</string>
+		<string>897be2</string>
 	</dict>
 	<dict>
 		<key>title</key>
 		<string>C++</string>
 		<key>color</key>
-		<string>FD613A</string>
+		<string>fa4040</string>
 	</dict>
 	<dict>
 		<key>title</key>

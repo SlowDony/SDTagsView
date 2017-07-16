@@ -8,20 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		1880325A1E5D3A1300DD7551 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 188032591E5D3A1300DD7551 /* MainViewController.m */; };
-		1880325D1E5D3BBB00DD7551 /* CollectionTagsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1880325C1E5D3BBB00DD7551 /* CollectionTagsViewController.m */; };
-		188032601E5D3EC600DD7551 /* TagsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1880325F1E5D3EC600DD7551 /* TagsModel.m */; };
-		188032621E5D3F4100DD7551 /* tagsData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 188032611E5D3F4100DD7551 /* tagsData.plist */; };
-		188032651E5D606900DD7551 /* SDLabTagsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 188032641E5D606900DD7551 /* SDLabTagsView.m */; };
-		188032681E5D97E400DD7551 /* LabelTagsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 188032671E5D97E400DD7551 /* LabelTagsViewController.m */; };
 		18BE89C41E5ADCBD00BA5AC9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BE89C31E5ADCBD00BA5AC9 /* main.m */; };
-		18BE89C71E5ADCBD00BA5AC9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BE89C61E5ADCBD00BA5AC9 /* AppDelegate.m */; };
-		18BE89CA1E5ADCBD00BA5AC9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BE89C91E5ADCBD00BA5AC9 /* ViewController.m */; };
 		18BE89CD1E5ADCBD00BA5AC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18BE89CB1E5ADCBD00BA5AC9 /* Main.storyboard */; };
 		18BE89CF1E5ADCBD00BA5AC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18BE89CE1E5ADCBD00BA5AC9 /* Assets.xcassets */; };
 		18BE89D21E5ADCBD00BA5AC9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18BE89D01E5ADCBD00BA5AC9 /* LaunchScreen.storyboard */; };
 		18BE89DD1E5ADCBD00BA5AC9 /* SDTagsViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BE89DC1E5ADCBD00BA5AC9 /* SDTagsViewTests.m */; };
 		18BE89E81E5ADCBD00BA5AC9 /* SDTagsViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BE89E71E5ADCBD00BA5AC9 /* SDTagsViewUITests.m */; };
-		18BE89F71E5ADCEE00BA5AC9 /* SDTagsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BE89F61E5ADCEE00BA5AC9 /* SDTagsView.m */; };
+		EFF2610D1F1B106100EEEEC8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF2610A1F1B106100EEEEC8 /* AppDelegate.m */; };
+		EFF2610E1F1B106100EEEEC8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF2610C1F1B106100EEEEC8 /* ViewController.m */; };
+		EFF261141F1B107200EEEEC8 /* CollectionTagsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF261111F1B107200EEEEC8 /* CollectionTagsViewController.m */; };
+		EFF261151F1B107200EEEEC8 /* SDTagsView.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF261131F1B107200EEEEC8 /* SDTagsView.m */; };
+		EFF2611F1F1B108400EEEEC8 /* LabelTagsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF261181F1B108400EEEEC8 /* LabelTagsViewController.m */; };
+		EFF261201F1B108400EEEEC8 /* SDLabTagsView.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF2611A1F1B108400EEEEC8 /* SDLabTagsView.m */; };
+		EFF261211F1B108400EEEEC8 /* tagsData.plist in Resources */ = {isa = PBXBuildFile; fileRef = EFF2611C1F1B108400EEEEC8 /* tagsData.plist */; };
+		EFF261221F1B108400EEEEC8 /* TagsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF2611E1F1B108400EEEEC8 /* TagsModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,21 +44,8 @@
 /* Begin PBXFileReference section */
 		188032581E5D3A1300DD7551 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		188032591E5D3A1300DD7551 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
-		1880325B1E5D3BBB00DD7551 /* CollectionTagsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionTagsViewController.h; sourceTree = "<group>"; };
-		1880325C1E5D3BBB00DD7551 /* CollectionTagsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionTagsViewController.m; sourceTree = "<group>"; };
-		1880325E1E5D3EC600DD7551 /* TagsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TagsModel.h; sourceTree = "<group>"; };
-		1880325F1E5D3EC600DD7551 /* TagsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TagsModel.m; sourceTree = "<group>"; };
-		188032611E5D3F4100DD7551 /* tagsData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = tagsData.plist; sourceTree = "<group>"; };
-		188032631E5D606900DD7551 /* SDLabTagsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDLabTagsView.h; sourceTree = "<group>"; };
-		188032641E5D606900DD7551 /* SDLabTagsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDLabTagsView.m; sourceTree = "<group>"; };
-		188032661E5D97E400DD7551 /* LabelTagsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LabelTagsViewController.h; sourceTree = "<group>"; };
-		188032671E5D97E400DD7551 /* LabelTagsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LabelTagsViewController.m; sourceTree = "<group>"; };
 		18BE89BF1E5ADCBD00BA5AC9 /* SDTagsView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SDTagsView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18BE89C31E5ADCBD00BA5AC9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		18BE89C51E5ADCBD00BA5AC9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		18BE89C61E5ADCBD00BA5AC9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		18BE89C81E5ADCBD00BA5AC9 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		18BE89C91E5ADCBD00BA5AC9 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		18BE89CC1E5ADCBD00BA5AC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		18BE89CE1E5ADCBD00BA5AC9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18BE89D11E5ADCBD00BA5AC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -69,9 +56,22 @@
 		18BE89E31E5ADCBD00BA5AC9 /* SDTagsViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SDTagsViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18BE89E71E5ADCBD00BA5AC9 /* SDTagsViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDTagsViewUITests.m; sourceTree = "<group>"; };
 		18BE89E91E5ADCBD00BA5AC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		18BE89F51E5ADCEE00BA5AC9 /* SDTagsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDTagsView.h; sourceTree = "<group>"; };
-		18BE89F61E5ADCEE00BA5AC9 /* SDTagsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDTagsView.m; sourceTree = "<group>"; };
 		18BE89F91E5ADEAF00BA5AC9 /* SDHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDHeader.h; sourceTree = "<group>"; };
+		EFF261091F1B106100EEEEC8 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EFF2610A1F1B106100EEEEC8 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EFF2610B1F1B106100EEEEC8 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		EFF2610C1F1B106100EEEEC8 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		EFF261101F1B107200EEEEC8 /* CollectionTagsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionTagsViewController.h; sourceTree = "<group>"; };
+		EFF261111F1B107200EEEEC8 /* CollectionTagsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionTagsViewController.m; sourceTree = "<group>"; };
+		EFF261121F1B107200EEEEC8 /* SDTagsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDTagsView.h; sourceTree = "<group>"; };
+		EFF261131F1B107200EEEEC8 /* SDTagsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDTagsView.m; sourceTree = "<group>"; };
+		EFF261171F1B108400EEEEC8 /* LabelTagsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LabelTagsViewController.h; sourceTree = "<group>"; };
+		EFF261181F1B108400EEEEC8 /* LabelTagsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LabelTagsViewController.m; sourceTree = "<group>"; };
+		EFF261191F1B108400EEEEC8 /* SDLabTagsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDLabTagsView.h; sourceTree = "<group>"; };
+		EFF2611A1F1B108400EEEEC8 /* SDLabTagsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDLabTagsView.m; sourceTree = "<group>"; };
+		EFF2611C1F1B108400EEEEC8 /* tagsData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = tagsData.plist; sourceTree = "<group>"; };
+		EFF2611D1F1B108400EEEEC8 /* TagsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TagsModel.h; sourceTree = "<group>"; };
+		EFF2611E1F1B108400EEEEC8 /* TagsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TagsModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,23 +122,12 @@
 		18BE89C11E5ADCBD00BA5AC9 /* SDTagsView */ = {
 			isa = PBXGroup;
 			children = (
-				188032611E5D3F4100DD7551 /* tagsData.plist */,
-				18BE89C51E5ADCBD00BA5AC9 /* AppDelegate.h */,
-				18BE89C61E5ADCBD00BA5AC9 /* AppDelegate.m */,
-				18BE89C81E5ADCBD00BA5AC9 /* ViewController.h */,
-				18BE89C91E5ADCBD00BA5AC9 /* ViewController.m */,
+				EFF261081F1B106100EEEEC8 /* APPDelegate */,
+				EFF2610F1F1B107200EEEEC8 /* SDCollectionTags */,
+				EFF261161F1B108400EEEEC8 /* SDLabTags */,
+				EFF2611B1F1B108400EEEEC8 /* SDTagsModel */,
 				188032581E5D3A1300DD7551 /* MainViewController.h */,
 				188032591E5D3A1300DD7551 /* MainViewController.m */,
-				1880325B1E5D3BBB00DD7551 /* CollectionTagsViewController.h */,
-				1880325C1E5D3BBB00DD7551 /* CollectionTagsViewController.m */,
-				18BE89F51E5ADCEE00BA5AC9 /* SDTagsView.h */,
-				18BE89F61E5ADCEE00BA5AC9 /* SDTagsView.m */,
-				188032631E5D606900DD7551 /* SDLabTagsView.h */,
-				188032641E5D606900DD7551 /* SDLabTagsView.m */,
-				188032661E5D97E400DD7551 /* LabelTagsViewController.h */,
-				188032671E5D97E400DD7551 /* LabelTagsViewController.m */,
-				1880325E1E5D3EC600DD7551 /* TagsModel.h */,
-				1880325F1E5D3EC600DD7551 /* TagsModel.m */,
 				18BE89F91E5ADEAF00BA5AC9 /* SDHeader.h */,
 				18BE89CB1E5ADCBD00BA5AC9 /* Main.storyboard */,
 				18BE89CE1E5ADCBD00BA5AC9 /* Assets.xcassets */,
@@ -173,6 +162,49 @@
 				18BE89E91E5ADCBD00BA5AC9 /* Info.plist */,
 			);
 			path = SDTagsViewUITests;
+			sourceTree = "<group>";
+		};
+		EFF261081F1B106100EEEEC8 /* APPDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				EFF261091F1B106100EEEEC8 /* AppDelegate.h */,
+				EFF2610A1F1B106100EEEEC8 /* AppDelegate.m */,
+				EFF2610B1F1B106100EEEEC8 /* ViewController.h */,
+				EFF2610C1F1B106100EEEEC8 /* ViewController.m */,
+			);
+			path = APPDelegate;
+			sourceTree = "<group>";
+		};
+		EFF2610F1F1B107200EEEEC8 /* SDCollectionTags */ = {
+			isa = PBXGroup;
+			children = (
+				EFF261101F1B107200EEEEC8 /* CollectionTagsViewController.h */,
+				EFF261111F1B107200EEEEC8 /* CollectionTagsViewController.m */,
+				EFF261121F1B107200EEEEC8 /* SDTagsView.h */,
+				EFF261131F1B107200EEEEC8 /* SDTagsView.m */,
+			);
+			path = SDCollectionTags;
+			sourceTree = "<group>";
+		};
+		EFF261161F1B108400EEEEC8 /* SDLabTags */ = {
+			isa = PBXGroup;
+			children = (
+				EFF261171F1B108400EEEEC8 /* LabelTagsViewController.h */,
+				EFF261181F1B108400EEEEC8 /* LabelTagsViewController.m */,
+				EFF261191F1B108400EEEEC8 /* SDLabTagsView.h */,
+				EFF2611A1F1B108400EEEEC8 /* SDLabTagsView.m */,
+			);
+			path = SDLabTags;
+			sourceTree = "<group>";
+		};
+		EFF2611B1F1B108400EEEEC8 /* SDTagsModel */ = {
+			isa = PBXGroup;
+			children = (
+				EFF2611C1F1B108400EEEEC8 /* tagsData.plist */,
+				EFF2611D1F1B108400EEEEC8 /* TagsModel.h */,
+				EFF2611E1F1B108400EEEEC8 /* TagsModel.m */,
+			);
+			path = SDTagsModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -285,8 +317,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				18BE89D21E5ADCBD00BA5AC9 /* LaunchScreen.storyboard in Resources */,
-				188032621E5D3F4100DD7551 /* tagsData.plist in Resources */,
 				18BE89CF1E5ADCBD00BA5AC9 /* Assets.xcassets in Resources */,
+				EFF261211F1B108400EEEEC8 /* tagsData.plist in Resources */,
 				18BE89CD1E5ADCBD00BA5AC9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -312,15 +344,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18BE89F71E5ADCEE00BA5AC9 /* SDTagsView.m in Sources */,
-				188032601E5D3EC600DD7551 /* TagsModel.m in Sources */,
-				188032651E5D606900DD7551 /* SDLabTagsView.m in Sources */,
-				18BE89CA1E5ADCBD00BA5AC9 /* ViewController.m in Sources */,
-				18BE89C71E5ADCBD00BA5AC9 /* AppDelegate.m in Sources */,
-				1880325D1E5D3BBB00DD7551 /* CollectionTagsViewController.m in Sources */,
-				188032681E5D97E400DD7551 /* LabelTagsViewController.m in Sources */,
+				EFF261151F1B107200EEEEC8 /* SDTagsView.m in Sources */,
+				EFF2611F1F1B108400EEEEC8 /* LabelTagsViewController.m in Sources */,
+				EFF261141F1B107200EEEEC8 /* CollectionTagsViewController.m in Sources */,
+				EFF261221F1B108400EEEEC8 /* TagsModel.m in Sources */,
+				EFF2610D1F1B106100EEEEC8 /* AppDelegate.m in Sources */,
+				EFF2610E1F1B106100EEEEC8 /* ViewController.m in Sources */,
 				1880325A1E5D3A1300DD7551 /* MainViewController.m in Sources */,
 				18BE89C41E5ADCBD00BA5AC9 /* main.m in Sources */,
+				EFF261201F1B108400EEEEC8 /* SDLabTagsView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
