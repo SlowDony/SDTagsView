@@ -7,7 +7,8 @@
 项目预览:
 
 ![](https://github.com/SlowDony/SDTagsView/blob/master/SDTagsView/SDTagsView.gif)
-
+<img src="https://github.com/SlowDony/SDTagsView/blob/master/SDTagsView/SDTagsView.gif" width="50%" height="50%">
+ 
 ----------------------------------------------------------------------------------
 标签使我们日常项目开发中经常遇见的,SDTagsView两种布局方式
 
