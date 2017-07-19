@@ -22,6 +22,7 @@
 
 * 点击删除标签.
 
-如果你发现了bug，请提一个issue。 欢迎给我提pull requests。
+我的邮箱：devslowdony@gmail.com 
 
-我的邮箱：devslowdony@gmail.com，当然，也欢迎star😆
+如果有好的建议或者意见 ,欢迎指出 , 您的支持是对我最大的鼓励,谢谢. 求STAR ..😆
+
