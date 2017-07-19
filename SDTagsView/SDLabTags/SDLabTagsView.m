@@ -9,6 +9,7 @@
 #import "SDLabTagsView.h"
 #import "SDHeader.h"
 #import "TagsModel.h"
+#import "SDHelper.h"
 @interface SDLabTagsView ()
 {
     UIView *sdTagsView;
@@ -64,7 +65,7 @@
         
         TagsModel *model =arr[i];
 
-        int labWidth = [self widthForLabel:model.title fontSize:16]+10;
+        int labWidth = [SDHelper widthForLabel:model.title fontSize:16]+10;
         UILabel *label = [[UILabel alloc] init];
         label.frame = CGRectMake(5*j + width, row * 30, labWidth, 22);
         label.backgroundColor = [UIColor clearColor];
@@ -74,8 +75,8 @@
         label.font = [UIFont systemFontOfSize:16];
         label.numberOfLines = 1;
         label.layer.borderWidth = 1;
-        label.textColor = [self getColor:model.color];
-        label.layer.borderColor = [self getColor:model.color].CGColor;
+        label.textColor = [SDHelper getColor:model.color];
+        label.layer.borderColor = [SDHelper getColor:model.color].CGColor;
         
         
 
@@ -107,28 +108,5 @@
 }
 
 
-/*
- 计算字体的宽度
- */
--(CGFloat )widthForLabel:(NSString *)text fontSize:(CGFloat )fontSize{
-    CGSize size =[text sizeWithAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIFont systemFontOfSize:fontSize],NSFontAttributeName, nil]];
-    
-    return size.width;
-}
 
--(UIColor *) getColor:(NSString *)hexColor
-{
-    unsigned int red, green, blue;
-    NSRange range;
-    range.length =2;
-    
-    range.location =0;
-    [[NSScanner scannerWithString:[hexColor substringWithRange:range]]scanHexInt:&red];
-    range.location =2;
-    [[NSScanner scannerWithString:[hexColor substringWithRange:range]]scanHexInt:&green];
-    range.location =4;
-    [[NSScanner scannerWithString:[hexColor substringWithRange:range]]scanHexInt:&blue];
-    
-    return [UIColor colorWithRed:(float)(red/255.0f)green:(float)(green/255.0f)blue:(float)(blue/255.0f)alpha:1.0f];
-}
 @end

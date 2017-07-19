@@ -17,8 +17,17 @@
 #define mHexRGBAlpha(rgbValue,a) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:(a)]
 #define fontHightColor mHexRGB(0x3c3c3c) //字体深色
 #define fontNomalColor mHexRGB(0xa0a0a0) //字体浅色
-#define bjBlueColor mHexRGB(0x151f41) //主题蓝色
-#define bjColor mHexRGB(0xf7f7f7)  //背景深灰色 mHexRGB(0xe4e4e4):浅灰
+
+#define bjColor mHexRGB(0xe4e4e4)  //背景灰色 
+
 #define borderCol mHexRGB(0xe4e4e4)    //border颜色
-#define mainColor   [UIColor colorWithPatternImage:[UIImage imageNamed:@"mainColor"]]
+
+
+#ifdef DEBUG
+#   define SDLog(fmt, ...) {NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);}
+#   define ELog(err) {if(err) DLog(@"%@", err)}
+#else
+#   define SDLog(...)
+#   define ELog(err)
+#endif
 #endif /* SDHeader_h */

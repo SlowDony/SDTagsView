@@ -11,9 +11,11 @@
 #import "SDLabTagsView.h"
 #import "TagsModel.h"
 @interface LabelTagsViewController ()
-{
-    NSArray *tagsArr;
-}
+
+/**
+ 数据源
+ */
+@property (nonatomic,strong)NSMutableArray *dataArr;
 @end
 
 @implementation LabelTagsViewController
@@ -22,7 +24,7 @@
     [super viewDidLoad];
     [self.navigationItem setTitle:self.navTitle];
     [self.view setBackgroundColor:[UIColor whiteColor]];
-    [self addData];
+    
     [self setUp];
     // Do any additional setup after loading the view.
 }
@@ -31,22 +33,22 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
--(void)addData{
-    
-    NSString *path =[[NSBundle mainBundle ]pathForResource:@"tagsData.plist" ofType:nil];
-    NSArray *dataArr =[NSArray arrayWithContentsOfFile:path];
-    NSMutableArray *tempArr =[NSMutableArray array];
-    for (NSDictionary *dict in dataArr){
-        TagsModel *model =[[TagsModel alloc]initWithTagsDict:dict];
-        [tempArr addObject:model];
-        tagsArr =[tempArr copy];
+-(NSMutableArray *)dataArr{
+    if (!_dataArr){
+        NSString *path =[[NSBundle mainBundle ]pathForResource:@"tagsData.plist" ofType:nil];
+        NSArray *dataArr =[NSArray arrayWithContentsOfFile:path];
+        NSMutableArray *tempArr =[NSMutableArray array];
+        for (NSDictionary *dict in dataArr){
+            TagsModel *model =[[TagsModel alloc]initWithTagsDict:dict];
+            [tempArr addObject:model];
+        }
+        _dataArr =[tempArr copy];
     }
-    
-    
+    return _dataArr;
 }
 -(void)setUp{
     
-    SDLabTagsView *sdTagsView =[SDLabTagsView sdLabTagsViewWithTagsArr:tagsArr];
+    SDLabTagsView *sdTagsView =[SDLabTagsView sdLabTagsViewWithTagsArr:self.dataArr];
     sdTagsView.frame =CGRectMake(0,30,mDeviceWidth,300);
     [self.view addSubview:sdTagsView];
     
