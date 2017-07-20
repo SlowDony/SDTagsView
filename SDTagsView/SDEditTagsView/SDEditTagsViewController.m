@@ -13,6 +13,7 @@
 #import "SDHeader.h"
 
 @interface SDEditTagsViewController ()
+<SDCollectionTagsViewDelegate>
 
 /**
  我的标签数据
@@ -83,6 +84,7 @@
         flowLayout.minimumInteritemSpacing = 5;
         
         _tagsView =[[SDCollectionTagsView alloc]initWithFrame:CGRectMake(15, 10, mDeviceWidth-30, mDeviceHeight) collectionViewLayout:flowLayout];
+        _tagsView.sd_delegate =self;
     }
     return _tagsView;
 }
@@ -105,6 +107,46 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - SDCollectionTagsViewDelegate
+
+-(void)SDCollectionTagsView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    
+    
+    TagsModel *tagsModel;
+    if (indexPath.section ==0) //我的标签
+    {
+        tagsModel = self.myTagsArr[indexPath.row];
+        [self.myTagsArr removeObjectAtIndex:indexPath.row];
+        [self.moreTagsArr insertObject:tagsModel atIndex:0];
+        
+        [self.tagsView moveItemAtIndexPath:indexPath toIndexPath:[NSIndexPath indexPathForItem:0 inSection:1]];
+        [self.dataArr addObject:self.myTagsArr];
+        [self.dataArr addObject:self.moreTagsArr];
+        [self.tagsView reloadData];
+        
+    }
+    
+    if (indexPath.section ==1) //所有标签
+    {
+        tagsModel =self.moreTagsArr[indexPath.row];
+        [self.moreTagsArr removeObjectAtIndex:indexPath.row];
+        [self.myTagsArr insertObject:tagsModel atIndex:0];
+
+        [self.tagsView moveItemAtIndexPath:indexPath toIndexPath:[NSIndexPath indexPathForItem:0 inSection:0]];
+        
+        [self.dataArr addObject:self.myTagsArr];
+        [self.dataArr addObject:self.moreTagsArr];
+        [self.tagsView reloadData];
+
+    }
+    
+    
+    
+    
+    
+    
+    
+}
 /*
 #pragma mark - Navigation
 
