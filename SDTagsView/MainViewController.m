@@ -12,15 +12,11 @@
  
  标签使我们日常项目开发中经常遇见的,SDTagsView两种布局方式
  
- UILabel
- UICollectionView (推荐使用)
- 目前只支持展示标签,自适应标签宽度.
+ .UILabel
+ .UICollectionView (推荐使用)
  
- 将要完善
- 
- 新增标签. (完成30%)
- 
- 点击删除标签.
+ 目前支持展示标签,自适应标签宽度.
+ 点击新增标签,删除标签
  
  我的邮箱：devslowdony@gmail.com
  

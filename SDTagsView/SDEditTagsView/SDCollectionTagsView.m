@@ -111,22 +111,38 @@ UICollectionViewDataSource
 //头视图
 -(UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath{
     UICollectionReusableView *headView =(UICollectionReusableView *)[collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:SDtagsHeadView forIndexPath:indexPath];
-    UILabel *label =[[UILabel  alloc]init];
-    label.frame =CGRectMake(0, 0, mDeviceWidth, 30);
+    UILabel *titlelabel =[[UILabel  alloc]init];
+    titlelabel.frame =CGRectMake(0, 0, 100, 30);
+    titlelabel.textColor =fontHightColor;
+
+    UILabel *detaillabel =[[UILabel  alloc]init];
+    detaillabel.frame =CGRectMake(100, 0, mDeviceWidth-100, 30);
+    detaillabel.textColor =fontNomalColor;
+    detaillabel.font =[UIFont systemFontOfSize:12];
+    
+    
+  
+    
+    titlelabel.textColor =fontHightColor;
     if (indexPath.section==0){
-        label.text =@"我的标签";
+        titlelabel.text =@"我的标签";
+        detaillabel.text =@"(点击我的标签可以移除)";
+        
     }
-    else {
-         label.text =@"所有标签";
+    else if(indexPath.section==1){
+         titlelabel.text =@"所有标签";
+         detaillabel.text =@"(点击所有标签添加到我的标签)";
+        
     }
+
     
-    label.textColor =[UIColor blackColor];
-    
+    //头部view下划线
     UIView *line =[[UIView alloc]init];
     line.backgroundColor =borderCol;
     line.frame =CGRectMake(0, 30, mDeviceWidth, 0.5);
     [headView addSubview:line];
-    [headView addSubview:label];
+    [headView addSubview:titlelabel];
+    [headView addSubview:detaillabel];
     return headView;
 }
 

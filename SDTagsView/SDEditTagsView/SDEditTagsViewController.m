@@ -6,6 +6,24 @@
 //  Copyright © 2017年 slowdony. All rights reserved.
 //
 
+/*
+ 
+ github地址https://github.com/SlowDony/SDTagsView
+ 
+ 标签使我们日常项目开发中经常遇见的,SDTagsView两种布局方式
+ 
+ .UILabel
+ .UICollectionView (推荐使用)
+ 
+ 目前支持展示标签,自适应标签宽度.
+ 点击新增标签,删除标签
+ 
+ 我的邮箱：devslowdony@gmail.com
+ 
+ 如果有好的建议或者意见 ,欢迎指出 , 您的支持是对我最大的鼓励,谢谢. 求STAR ..😆
+ */
+
+
 #import "SDEditTagsViewController.h"
 #import "TagsModel.h"
 #import "SDCollectionTagsView.h"

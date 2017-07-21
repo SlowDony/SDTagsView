@@ -14,6 +14,7 @@
 		18BE89D21E5ADCBD00BA5AC9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18BE89D01E5ADCBD00BA5AC9 /* LaunchScreen.storyboard */; };
 		18BE89DD1E5ADCBD00BA5AC9 /* SDTagsViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BE89DC1E5ADCBD00BA5AC9 /* SDTagsViewTests.m */; };
 		18BE89E81E5ADCBD00BA5AC9 /* SDTagsViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BE89E71E5ADCBD00BA5AC9 /* SDTagsViewUITests.m */; };
+		EF01A73B1F2247DD00985FBE /* SDEditTagsView.gif in Resources */ = {isa = PBXBuildFile; fileRef = EF01A73A1F2247DD00985FBE /* SDEditTagsView.gif */; };
 		EFE0413B1F1FAB8300995112 /* SDEditTagsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFE0413A1F1FAB8300995112 /* SDEditTagsViewController.m */; };
 		EFE041411F1FB3BA00995112 /* SDCollectionTagsView.m in Sources */ = {isa = PBXBuildFile; fileRef = EFE041401F1FB3BA00995112 /* SDCollectionTagsView.m */; };
 		EFE041441F1FB63400995112 /* SDHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = EFE041431F1FB63400995112 /* SDHelper.m */; };
@@ -62,6 +63,7 @@
 		18BE89E71E5ADCBD00BA5AC9 /* SDTagsViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDTagsViewUITests.m; sourceTree = "<group>"; };
 		18BE89E91E5ADCBD00BA5AC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18BE89F91E5ADEAF00BA5AC9 /* SDHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDHeader.h; sourceTree = "<group>"; };
+		EF01A73A1F2247DD00985FBE /* SDEditTagsView.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = SDEditTagsView.gif; sourceTree = "<group>"; };
 		EFE041391F1FAB8300995112 /* SDEditTagsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDEditTagsViewController.h; sourceTree = "<group>"; };
 		EFE0413A1F1FAB8300995112 /* SDEditTagsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDEditTagsViewController.m; sourceTree = "<group>"; };
 		EFE0413F1F1FB3BA00995112 /* SDCollectionTagsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDCollectionTagsView.h; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 		18BE89C21E5ADCBD00BA5AC9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EF01A73A1F2247DD00985FBE /* SDEditTagsView.gif */,
 				EFF261291F1B4B8600EEEEC8 /* SDTagsView.gif */,
 				EFF261271F1B4B7E00EEEEC8 /* SDTagsView.png */,
 				18BE89C31E5ADCBD00BA5AC9 /* main.m */,
@@ -349,6 +352,7 @@
 				18BE89D21E5ADCBD00BA5AC9 /* LaunchScreen.storyboard in Resources */,
 				18BE89CF1E5ADCBD00BA5AC9 /* Assets.xcassets in Resources */,
 				EFF261211F1B108400EEEEC8 /* tagsData.plist in Resources */,
+				EF01A73B1F2247DD00985FBE /* SDEditTagsView.gif in Resources */,
 				18BE89CD1E5ADCBD00BA5AC9 /* Main.storyboard in Resources */,
 				EFF2612A1F1B4B8600EEEEC8 /* SDTagsView.gif in Resources */,
 			);
