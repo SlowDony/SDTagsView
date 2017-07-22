@@ -12,6 +12,7 @@
 
 
 添加删除标签
+
 <img src="https://github.com/SlowDony/SDTagsView/blob/master/SDTagsView/SDEditTagsView.gif" width="50%" height="50%">
  
 
