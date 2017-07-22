@@ -5,8 +5,14 @@
  
 
 项目预览:
+布局标签
 
 <img src="https://github.com/SlowDony/SDTagsView/blob/master/SDTagsView/SDTagsView.gif" width="50%" height="50%">
+
+
+
+添加删除标签
+<img src="https://github.com/SlowDony/SDTagsView/blob/master/SDTagsView/SDEditTagsView.gif" width="50%" height="50%">
  
 
 标签使我们日常项目开发中经常遇见的,SDTagsView两种布局方式
@@ -14,13 +20,11 @@
 * UILabel 
 * UICollectionView (推荐使用)
 
-目前只支持展示标签,自适应标签宽度.
 
-将要完善
+展示标签,自适应标签宽度.
 
-* 新增标签.
+点击新增标签,删除标签.
 
-* 点击删除标签.
 
 我的邮箱：devslowdony@gmail.com 
 
