@@ -7,6 +7,8 @@
 //
 
 #import "SDTagsView.h"
+
+#import "SDCollectionTagsViewCell.h"
 #import "SDHeader.h"
 #import "SDHelper.h"
 #import "TagsModel.h"
@@ -63,11 +65,10 @@ UICollectionViewDelegateFlowLayout
         _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(15, 20, mDeviceWidth-30, mDeviceHeight-44) collectionViewLayout:flowLayout];
         _collectionView.delegate = self;
         _collectionView.dataSource = self;
-//        _collectionView.backgroundColor=[UIColor redColor];
+
        [_collectionView setBackgroundColor:[UIColor clearColor]];
-//        [sdTagsView addSubview:_collectionView];
         //注册
-        [_collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:SDtagsView];
+       [_collectionView registerClass:[SDCollectionTagsViewCell class] forCellWithReuseIdentifier:SDtagsView];
     }
     return _collectionView;
 }
@@ -85,20 +86,10 @@ UICollectionViewDelegateFlowLayout
 }
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:SDtagsView forIndexPath:indexPath];
+    SDCollectionTagsViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:SDtagsView forIndexPath:indexPath];
     TagsModel *model =self.tagsArr[indexPath.row];
     
-    UILabel *label = [[UILabel alloc] init];
-    label.text = [NSString stringWithFormat:@"%@",model.title];
-    label.frame = CGRectMake(0, 0, ([SDHelper widthForLabel:label.text fontSize:16] + 10), 22);
-    label.font = [UIFont systemFontOfSize:16];
-    label.layer.cornerRadius = 2.0;
-    label.layer.masksToBounds = YES;
-    label.layer.borderWidth = 1.0;
-    label.textAlignment = NSTextAlignmentCenter;
-    label.textColor = [SDHelper getColor:model.color];
-    label.layer.borderColor = [SDHelper getColor:model.color].CGColor;
-    [cell.contentView addSubview:label];
+    [cell setValueWithModel:model];
     return cell;
 }
 

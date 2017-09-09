@@ -7,9 +7,12 @@
 //
 
 #import "SDCollectionTagsView.h"
+
+#import "SDCollectionTagsViewCell.h"
 #import "TagsModel.h"
 #import "SDHelper.h" 
 #import "SDHeader.h"
+
 #define SDtagsView @"SDtagsView"
 #define SDtagsHeadView @"SDtagsHeadView"
 
@@ -18,6 +21,11 @@
 UICollectionViewDelegate,
 UICollectionViewDataSource
 >
+
+/**
+ 存放cell唯一标识符
+ */
+@property (nonatomic,strong)NSMutableDictionary *cellIdDic;
 
 @end
 @implementation SDCollectionTagsView
@@ -30,6 +38,12 @@ UICollectionViewDataSource
 }
 */
 
+-(NSMutableDictionary *)cellIdDic{
+    if (!_cellIdDic){
+        _cellIdDic =[NSMutableDictionary dictionary];
+    }
+    return _cellIdDic;
+}
 
 - (instancetype)initWithFrame:(CGRect)frame collectionViewLayout:(UICollectionViewLayout *)layout
 {
@@ -41,7 +55,7 @@ UICollectionViewDataSource
         [self setBackgroundColor:[UIColor clearColor]];
         
         //注册
-        [self registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:SDtagsView];
+        [self registerClass:[SDCollectionTagsViewCell class] forCellWithReuseIdentifier:SDtagsView];
         //注册头部
         [self registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:SDtagsHeadView];
         
@@ -68,25 +82,20 @@ UICollectionViewDataSource
     TagsModel *model =arr[indexPath.row];
     CGFloat width = [SDHelper widthForLabel:[NSString stringWithFormat:@"%@",model.title] fontSize:16];
     return CGSizeMake(width+10,32);
+    
 }
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:SDtagsView forIndexPath:indexPath];
+    //每次从字典中取出根据IndexPath取出唯一标识符
+
+    
+    
+    SDCollectionTagsViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:SDtagsView forIndexPath:indexPath];
     
     NSArray *arr =self.dataArr[indexPath.section];
     TagsModel *model =arr[indexPath.row];
     
-    UILabel *label = [[UILabel alloc] init];
-    label.text = [NSString stringWithFormat:@"%@",model.title];
-    label.frame = CGRectMake(0, 10, ([SDHelper widthForLabel:label.text fontSize:16] + 10), 22);
-    label.font = [UIFont systemFontOfSize:16];
-    label.layer.cornerRadius = 2.0;
-    label.layer.masksToBounds = YES;
-    label.layer.borderWidth = 1.0;
-    label.textAlignment = NSTextAlignmentCenter;
-    label.textColor = [SDHelper getColor:model.color];
-    label.layer.borderColor = [SDHelper getColor:model.color].CGColor;
-    [cell.contentView addSubview:label];
+    [cell setValueWithModel:model];
     return cell;
 }
 
@@ -110,6 +119,7 @@ UICollectionViewDataSource
 }
 //头视图
 -(UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath{
+    
     UICollectionReusableView *headView =(UICollectionReusableView *)[collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:SDtagsHeadView forIndexPath:indexPath];
     UILabel *titlelabel =[[UILabel  alloc]init];
     titlelabel.frame =CGRectMake(0, 0, 100, 30);
@@ -119,10 +129,6 @@ UICollectionViewDataSource
     detaillabel.frame =CGRectMake(100, 0, mDeviceWidth-100, 30);
     detaillabel.textColor =fontNomalColor;
     detaillabel.font =[UIFont systemFontOfSize:12];
-    
-    
-  
-    
     titlelabel.textColor =fontHightColor;
     if (indexPath.section==0){
         titlelabel.text =@"我的标签";
@@ -132,7 +138,6 @@ UICollectionViewDataSource
     else if(indexPath.section==1){
          titlelabel.text =@"所有标签";
          detaillabel.text =@"(点击所有标签添加到我的标签)";
-        
     }
 
     

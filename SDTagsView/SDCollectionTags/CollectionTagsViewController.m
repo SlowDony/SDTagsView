@@ -61,8 +61,6 @@
             [tempArr addObject:model];
         }
         _dataArr =[tempArr copy];
-
-
     }
     return _dataArr;
 }

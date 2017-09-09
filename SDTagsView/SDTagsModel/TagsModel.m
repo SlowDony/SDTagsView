@@ -21,4 +21,5 @@
 +(instancetype)tagsModelWithDict:(NSDictionary *)dict{
     return [[self alloc]initWithTagsDict:dict];
 }
+
 @end

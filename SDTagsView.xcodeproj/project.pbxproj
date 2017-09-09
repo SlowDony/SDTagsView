@@ -15,6 +15,7 @@
 		18BE89DD1E5ADCBD00BA5AC9 /* SDTagsViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BE89DC1E5ADCBD00BA5AC9 /* SDTagsViewTests.m */; };
 		18BE89E81E5ADCBD00BA5AC9 /* SDTagsViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BE89E71E5ADCBD00BA5AC9 /* SDTagsViewUITests.m */; };
 		EF01A73B1F2247DD00985FBE /* SDEditTagsView.gif in Resources */ = {isa = PBXBuildFile; fileRef = EF01A73A1F2247DD00985FBE /* SDEditTagsView.gif */; };
+		EF0740CF1F64423300B24854 /* SDCollectionTagsViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EF0740CE1F64423300B24854 /* SDCollectionTagsViewCell.m */; };
 		EFE0413B1F1FAB8300995112 /* SDEditTagsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFE0413A1F1FAB8300995112 /* SDEditTagsViewController.m */; };
 		EFE041411F1FB3BA00995112 /* SDCollectionTagsView.m in Sources */ = {isa = PBXBuildFile; fileRef = EFE041401F1FB3BA00995112 /* SDCollectionTagsView.m */; };
 		EFE041441F1FB63400995112 /* SDHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = EFE041431F1FB63400995112 /* SDHelper.m */; };
@@ -64,6 +65,8 @@
 		18BE89E91E5ADCBD00BA5AC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18BE89F91E5ADEAF00BA5AC9 /* SDHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDHeader.h; sourceTree = "<group>"; };
 		EF01A73A1F2247DD00985FBE /* SDEditTagsView.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = SDEditTagsView.gif; sourceTree = "<group>"; };
+		EF0740CD1F64423300B24854 /* SDCollectionTagsViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDCollectionTagsViewCell.h; sourceTree = "<group>"; };
+		EF0740CE1F64423300B24854 /* SDCollectionTagsViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDCollectionTagsViewCell.m; sourceTree = "<group>"; };
 		EFE041391F1FAB8300995112 /* SDEditTagsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDEditTagsViewController.h; sourceTree = "<group>"; };
 		EFE0413A1F1FAB8300995112 /* SDEditTagsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDEditTagsViewController.m; sourceTree = "<group>"; };
 		EFE0413F1F1FB3BA00995112 /* SDCollectionTagsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDCollectionTagsView.h; sourceTree = "<group>"; };
@@ -192,6 +195,8 @@
 				EFE0413A1F1FAB8300995112 /* SDEditTagsViewController.m */,
 				EFE0413F1F1FB3BA00995112 /* SDCollectionTagsView.h */,
 				EFE041401F1FB3BA00995112 /* SDCollectionTagsView.m */,
+				EF0740CD1F64423300B24854 /* SDCollectionTagsViewCell.h */,
+				EF0740CE1F64423300B24854 /* SDCollectionTagsViewCell.m */,
 			);
 			path = SDEditTagsView;
 			sourceTree = "<group>";
@@ -384,6 +389,7 @@
 				EFF261141F1B107200EEEEC8 /* CollectionTagsViewController.m in Sources */,
 				EFF261221F1B108400EEEEC8 /* TagsModel.m in Sources */,
 				EFE0413B1F1FAB8300995112 /* SDEditTagsViewController.m in Sources */,
+				EF0740CF1F64423300B24854 /* SDCollectionTagsViewCell.m in Sources */,
 				EFF2610D1F1B106100EEEEC8 /* AppDelegate.m in Sources */,
 				EFF2610E1F1B106100EEEEC8 /* ViewController.m in Sources */,
 				1880325A1E5D3A1300DD7551 /* MainViewController.m in Sources */,
