@@ -79,27 +79,7 @@
             TagsModel *tagsModel =[TagsModel tagsModelWithDict:dic];
             [emptyArr addObject:tagsModel];
         }
-        for (NSDictionary *dic in arr) {
-            TagsModel *tagsModel =[TagsModel tagsModelWithDict:dic];
-            [emptyArr addObject:tagsModel];
-        }
-        for (NSDictionary *dic in arr) {
-            TagsModel *tagsModel =[TagsModel tagsModelWithDict:dic];
-            [emptyArr addObject:tagsModel];
-        }
-        for (NSDictionary *dic in arr) {
-            TagsModel *tagsModel =[TagsModel tagsModelWithDict:dic];
-            [emptyArr addObject:tagsModel];
-        }
-        for (NSDictionary *dic in arr) {
-            TagsModel *tagsModel =[TagsModel tagsModelWithDict:dic];
-            [emptyArr addObject:tagsModel];
-        }
-        for (NSDictionary *dic in arr) {
-            TagsModel *tagsModel =[TagsModel tagsModelWithDict:dic];
-            [emptyArr addObject:tagsModel];
-        }
-         _moreTagsArr =[NSMutableArray arrayWithArray:emptyArr];
+        _moreTagsArr =[NSMutableArray arrayWithArray:emptyArr];
         
         
     }
