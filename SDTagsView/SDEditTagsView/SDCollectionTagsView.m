@@ -9,6 +9,7 @@
 #import "SDCollectionTagsView.h"
 
 #import "SDCollectionTagsViewCell.h"
+
 #import "TagsModel.h"
 #import "SDHelper.h" 
 #import "SDHeader.h"
@@ -87,8 +88,6 @@ UICollectionViewDataSource
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     //每次从字典中取出根据IndexPath取出唯一标识符
-
-    
     
     SDCollectionTagsViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:SDtagsView forIndexPath:indexPath];
     
@@ -122,7 +121,7 @@ UICollectionViewDataSource
     
     UICollectionReusableView *headView =(UICollectionReusableView *)[collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:SDtagsHeadView forIndexPath:indexPath];
     UILabel *titlelabel =[[UILabel  alloc]init];
-    titlelabel.frame =CGRectMake(0, 0, 100, 30);
+    titlelabel.frame =CGRectMake(20, 0, 100, 30);
     titlelabel.textColor =fontHightColor;
 
     UILabel *detaillabel =[[UILabel  alloc]init];

@@ -27,9 +27,10 @@
 #import "SDEditTagsViewController.h"
 #import "TagsModel.h"
 #import "SDCollectionTagsView.h"
-
+#import "SDCollectionTagsFlowLayout.h"
 #import "SDHeader.h"
 
+#define tagsDataFilepath [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:@"tagsData.data"]
 @interface SDEditTagsViewController ()
 <SDCollectionTagsViewDelegate>
 
@@ -48,7 +49,6 @@
  */
 @property (nonatomic,strong)NSMutableArray *dataArr;
 
-
 /**
  SDCollectionTagsView
  */
@@ -58,38 +58,45 @@
 
 @implementation SDEditTagsViewController
 
-
-
 -(NSMutableArray *)myTagsArr{
     if (!_myTagsArr) {
-        _myTagsArr =[NSMutableArray array];
-        
+        NSMutableArray *dataArr = [NSKeyedUnarchiver unarchiveObjectWithFile:tagsDataFilepath];
+        if (dataArr.count>0) {
+            _myTagsArr = [NSMutableArray arrayWithArray:[dataArr objectAtIndex:0]];
+        }
+        if (!_myTagsArr) {
+            _myTagsArr =[NSMutableArray array];
+        }
     }
     return _myTagsArr;
 }
 
 -(NSMutableArray *)moreTagsArr{
     if (!_moreTagsArr){
-       
-        NSString *path =[[NSBundle mainBundle]pathForResource:@"tagsData" ofType:@"plist"];
-        NSArray *arr =[NSArray arrayWithContentsOfFile:path];
-        
-        NSMutableArray *emptyArr =[NSMutableArray array];
-        for (NSDictionary *dic in arr) {
-            TagsModel *tagsModel =[TagsModel tagsModelWithDict:dic];
-            [emptyArr addObject:tagsModel];
+        NSMutableArray *dataArr = [NSKeyedUnarchiver unarchiveObjectWithFile:tagsDataFilepath];
+        if (dataArr.count>0) {
+            _moreTagsArr = [NSMutableArray arrayWithArray:[dataArr objectAtIndex:1]];
         }
-        _moreTagsArr =[NSMutableArray arrayWithArray:emptyArr];
         
-        
+        if (!_moreTagsArr) {
+            NSString *path =[[NSBundle mainBundle]pathForResource:@"tagsData" ofType:@"plist"];
+            NSArray *arr =[NSArray arrayWithContentsOfFile:path];
+            NSMutableArray *emptyArr =[NSMutableArray array];
+            for (NSDictionary *dic in arr) {
+                TagsModel *tagsModel =[TagsModel tagsModelWithDict:dic];
+                [emptyArr addObject:tagsModel];
+            }
+            _moreTagsArr =[NSMutableArray arrayWithArray:emptyArr];
+        }
     }
     return _moreTagsArr;
 }
 
 -(NSMutableArray *)dataArr{
     if (!_dataArr){
-        _dataArr =[NSMutableArray array];
-    
+     _dataArr =[NSMutableArray array];
+    [_dataArr addObject:self.myTagsArr];
+    [_dataArr addObject:self.moreTagsArr];
     }
     return _dataArr;
 }
@@ -97,11 +104,9 @@
 
 -(SDCollectionTagsView *)tagsView{
     if (!_tagsView){
-        UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
-        flowLayout.minimumLineSpacing = 5;
-        flowLayout.minimumInteritemSpacing = 5;
-        
-        _tagsView =[[SDCollectionTagsView alloc]initWithFrame:CGRectMake(15, 10, mDeviceWidth-30, mDeviceHeight) collectionViewLayout:flowLayout];
+        SDCollectionTagsFlowLayout *flowLayout = [[SDCollectionTagsFlowLayout alloc]initWthType:TagsTypeWithLeft];
+        flowLayout.betweenOfCell = 10;
+        _tagsView =[[SDCollectionTagsView alloc]initWithFrame:CGRectMake(0, 10, mDeviceWidth, mDeviceHeight) collectionViewLayout:flowLayout];
         _tagsView.sd_delegate =self;
     }
     return _tagsView;
@@ -113,9 +118,6 @@
     self.view.backgroundColor =[UIColor whiteColor];
     // Do any additional setup after loading the view.
     [self.view addSubview:self.tagsView];
-    
-    [self.dataArr addObject:self.myTagsArr];
-    [self.dataArr addObject:self.moreTagsArr];
     self.tagsView.dataArr =[NSMutableArray arrayWithArray:self.dataArr];
     [self.tagsView reloadData];
     
@@ -138,10 +140,6 @@
         [self.moreTagsArr insertObject:tagsModel atIndex:0];
         
         [self.tagsView moveItemAtIndexPath:indexPath toIndexPath:[NSIndexPath indexPathForItem:0 inSection:1]];
-        [self.dataArr addObject:self.myTagsArr];
-        [self.dataArr addObject:self.moreTagsArr];
-        [self.tagsView reloadData];
-        
     }
     
     if (indexPath.section ==1) //所有标签
@@ -151,15 +149,13 @@
         [self.myTagsArr insertObject:tagsModel atIndex:0];
 
         [self.tagsView moveItemAtIndexPath:indexPath toIndexPath:[NSIndexPath indexPathForItem:0 inSection:0]];
-        
-        [self.dataArr addObject:self.myTagsArr];
-        [self.dataArr addObject:self.moreTagsArr];
-        [self.tagsView reloadData];
 
     }
+    [self.dataArr removeAllObjects];
+    [self.dataArr addObject:self.myTagsArr];
+    [self.dataArr addObject:self.moreTagsArr];
     
-    
-    
+   [NSKeyedArchiver archiveRootObject:self.dataArr toFile:tagsDataFilepath];
     
     
     

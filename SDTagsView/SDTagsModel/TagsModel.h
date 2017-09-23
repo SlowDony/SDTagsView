@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface TagsModel : NSObject
+<NSCoding>
 
 /**
  标签标题

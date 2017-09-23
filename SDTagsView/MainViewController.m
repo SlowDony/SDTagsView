@@ -94,7 +94,7 @@ UITableViewDataSource
     static NSString *cellId = @"cellID";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
     if (cell == nil) {
-        //        cell = [[[NSBundle mainBundle] loadNibNamed:@"<#string#>" owner:self options:nil]lastObject];
+        
         cell =[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
     }
     //配置数据
@@ -151,12 +151,7 @@ UITableViewDataSource
 -(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
     return 0.1;
 }
-//-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
-//    UIView *headView = [[UIView alloc] init];
-//    headView.frame = CGRectMake(0, 0, mDeviceWidth, 40);
-//    headView.backgroundColor = [UIColor clearColor];
-//    [self.view addSubview:headView];
-//}
+
 /*
 #pragma mark - Navigation
 
